@@ -2,7 +2,7 @@
 ## Read license plate number from existing video in S3
 
 1. Create an empty S3 bucket in same region of your Amazon Rekognition service, please note down your bucket name.
-2. Create the Amazon SNS topic.
+2. Create the Amazon SNS topic, prepend the topic name with "AmazonRekognition"
 3. Create the Amazon SQS queue.
 4. Allow SNS to send message to SQS, modify your SQS access policy:
 
@@ -42,8 +42,13 @@
 }
 
 ```
-- Create new Service Role, Choose Rekognition as AWS Service.
+- Create new Service Role, Choose Rekognition as AWS Service. Please note service role ARN.
 
 
 5. Subscribe the Amazon SQS queue to the Amazon SNS topic.
+6. Create Cloud9 Environment
+7. Clone demo repository: git clone https://github.com/divaga/plate-number-rekognition.git
+8. Copy video to S3 bucket
+9. Open detect-text.py and chante roleArn, bucket and video file
+10. execute detect-text.py
 
