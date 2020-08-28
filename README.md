@@ -46,7 +46,10 @@
 
 
 5. Subscribe the Amazon SQS queue to the Amazon SNS topic.
-6. Create Cloud9 Environment
+6. Create Cloud9 Environment and install boto3
+```
+sudo pip install boto3
+```
 7. Clone demo repository: git clone https://github.com/divaga/plate-number-rekognition.git
 8. Copy video to S3 bucket
 9. Open detect-text.py and chante roleArn, bucket and video file
