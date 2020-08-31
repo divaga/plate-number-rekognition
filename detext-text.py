@@ -53,6 +53,7 @@ class VideoDetect:
             print('Frame rate: ' + str(response['VideoMetadata']['FrameRate']))
             print()
             
+            # REGEX for Indonesia's Car Plate Number
             plate_pattern = '^[A-Z]{1,2} [0-9]{1,4} [A-Z]{1,3}$'
 
             for textDetection in response['TextDetections']:
