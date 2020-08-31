@@ -50,8 +50,20 @@
 ```
 sudo pip install boto3
 ```
-7. Clone demo repository: git clone https://github.com/divaga/plate-number-rekognition.git
-8. Copy video to S3 bucket
-9. Open detect-text.py and chante roleArn, bucket and video file
+7. Clone demo repository: 
+
+```
+git clone https://github.com/divaga/plate-number-rekognition.git
+```
+
+8. Go to plate-number-rekognition folder and copy sample video to your S3 bucket
+
+```
+aws s3 cp traffic.mp4 s3://<YOUR-S3-BUCKET-NAME>/traffic.mp4
+```
+9. Open detect-text.py and change value for roleArn (from step no.4), bucket name (from step no.1) and video file name (from step no.8)
 10. execute detect-text.py
+```
+python detext-text.py 
+```
 
