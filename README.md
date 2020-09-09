@@ -2,8 +2,8 @@
 ## Read license plate number from existing video in S3
 
 1. Create an empty S3 bucket in same region of your Amazon Rekognition service, please note down your bucket name.
-2. Create the Amazon SNS topic, prepend the topic name with "AmazonRekognition"
-3. Create the Amazon SQS queue.
+2. Create the Amazon SNS topic, prepend the topic name with "AmazonRekognition" and note down your SNS ARN.
+3. Create the Amazon SQS queue, note down your SQS ARN.
 4. Allow SNS to send message to SQS, modify your SQS access policy:
 
 ```
@@ -46,7 +46,7 @@
 
 
 5. Subscribe the Amazon SQS queue to the Amazon SNS topic.
-6. Create Cloud9 Environment and install boto3
+6. Create Cloud9 Environment with default configuration and install boto3
 ```
 sudo pip install boto3
 ```
