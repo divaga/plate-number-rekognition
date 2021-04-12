@@ -66,4 +66,4 @@ aws s3 cp traffic.mp4 s3://<YOUR-S3-BUCKET-NAME>/traffic.mp4
 ```
 python detext-text.py 
 ```
-
+10. For Lambda. use detect-text-lambda.py and set Lambda timeout properly.
